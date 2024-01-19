@@ -1,3 +1,5 @@
+//содержит большое методы для обработки путей к файлам, создания директорий,
+// переименования файлов, а также для проверки типов файлов и очистки временных и выходных директорий
 package com.src;
 
 import java.io.File;
@@ -10,7 +12,7 @@ public class PathCheck {
     private String tempDir;
     private String outputDir;
 
-    public PathCheck(String filePath){
+    public PathCheck(String filePath){ //иниц объект на основе переданного пути
         this.filePath = filePath;
 
         int fileNameStart = 0;
@@ -31,7 +33,7 @@ public class PathCheck {
         this.tempDir = this.path + "temp/";
         this.outputDir = this.path + "output/";
     }
-    PathCheck(PathCheck filePathCheck) {
+    PathCheck(PathCheck filePathCheck) { // создает новый объект на основе предыдущего
         this.filePath = filePathCheck.filePath;
         this.path = filePathCheck.path;
         this.fileName = filePathCheck.fileName;
@@ -41,7 +43,7 @@ public class PathCheck {
     PathCheck(){
     }
 
-    public void CreateDirs() {
+    public void CreateDirs() { //создает временную входную и выходную директорию
 
         boolean created;
 
@@ -51,7 +53,7 @@ public class PathCheck {
         created = output.mkdir();
 
     }
-    public void fileRename(String fileName) {
+    public void fileRename(String fileName) { //переименновывает файл
         File file = new File(filePath);
         File newFile = new File(path + fileName);
         file.renameTo(newFile);
@@ -61,10 +63,10 @@ public class PathCheck {
     }
     public void setOutputDir(String outputDir) {
         this.outputDir = outputDir;
-    }
+    } //уст вых директорию
     public void setTempDir(String tempDir) {
         this.tempDir = tempDir;
-    }
+    } //временную
 
     public String getFileName() {
         return this.fileName;
@@ -108,7 +110,7 @@ public class PathCheck {
         return isEnc() || isTxt() || isZip() || isXml() ;
     }
 
-    public void ClearTemp(boolean needToDelTemp) {
+    public void ClearTemp(boolean needToDelTemp) { //очищает временную дир, при необходимости удаляет ее
 
         File temp = new File(tempDir);
         String[] entries = temp.list();
@@ -124,7 +126,7 @@ public class PathCheck {
     public void ClearTemp() {
         ClearTemp(true);
     }
-    public void ClearOutput() {
+    public void ClearOutput() { //очищает выходную директорию
 
         File temp = new File(outputDir);
         String[] entries = temp.list();
