@@ -1,0 +1,10 @@
+some text 32+4 and more text
+a lot 563/42 of text here
+maybe some 456*34 text
+... a lot of text 56/6 + (32+45)
+and some double 34.2/12.5
+some text 32*4 and more text
+a lot 52/35 of text here
+maybe some 4*12 text
+... a lot of text 26/8 + (4+234) * 356
+and some double 34.2/12.5 + 45
