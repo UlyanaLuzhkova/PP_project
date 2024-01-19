@@ -20,7 +20,7 @@ public class CorrectFiles {
     private Encrypt encrypt;
     private String encryptKey;
 
-    private PathCheck isZip(PathCheck inputFile) throws IOException {
+    private PathCheck isZip(PathCheck inputFile) throws IOException { //проверка, является ли файл zip
 
         PathCheck outputFile;
 
@@ -33,7 +33,7 @@ public class CorrectFiles {
 
         return outputFile;
     }
-    private boolean isXml(PathCheck inputFile) throws Exception {
+    private boolean isXml(PathCheck inputFile) throws Exception { //проверка, содержит ли файл xml структуру
 
         boolean isXml = false;
         String buffer;
@@ -70,7 +70,8 @@ public class CorrectFiles {
         this.needToWrapBack = needToWrapBack;
     }
 
-    private PathCheck NormaliseEncryptedFile(PathCheck inputFile) throws Exception {
+    private PathCheck NormaliseEncryptedFile(PathCheck inputFile) throws Exception { //нормализует зашифрованный файл,
+        // если он был зашифрован и затем запакован
 
         PathCheck outputFile;
 
@@ -88,7 +89,8 @@ public class CorrectFiles {
 
         return outputFile;
     }
-    public void PrepareFile() throws Exception {
+    public void PrepareFile() throws Exception { //обрабатывает фходной файл, выполняет действия в зависимости от
+        // его типа и настроек
 
         inputPath = new PathCheck(inputFile);
 
@@ -128,7 +130,8 @@ public class CorrectFiles {
         }
 
     }
-    public PathCheck ReturnFile() throws Exception {
+    public PathCheck ReturnFile() throws Exception { //возвращает обработанный файл применяя действия
+        // в зависимости от заданных параметров (распаковка, шифрование, повторная упаковка)
 
         if(needToWrapBack) {
             if (wasEncrypted && wasZipped) {
