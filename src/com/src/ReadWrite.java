@@ -16,7 +16,7 @@ public class ReadWrite {
 
     private String filePath;
 
-    public ReadWrite(String filePath){
+    public ReadWrite(String filePath){ // устанавливает путь
         this.filePath = filePath;
         inputPath = new PathCheck(this.filePath);
         correctFiles = new CorrectFiles();
@@ -24,26 +24,26 @@ public class ReadWrite {
 
     public void setReader(Reader reader) {
         this.reader = reader;
-    }
+    } //устанавливает объект чтения
     public void setWriter(Writer writer) {
         this.writer = writer;
-    }
+    } //об записи
     public void setFilePath(String filePath) {
         this.filePath = filePath;
-    }
+    }// путь к файлу
     public void setNeedToWrap(boolean needToWrap) {
         correctFiles.setNeedToWrapBack(needToWrap);
-    }
-    public void setEncryptKey(String encryptKey) throws InvalidKeyException {
+    } //необходимость обертывания
+    public void setEncryptKey(String encryptKey) throws InvalidKeyException { //устанавливает ключ
         correctFiles.setEncryptKey(encryptKey);
     }
     public void setOutputPath(String outputPath) {
         inputPath.setOutputDir(outputPath);
-    }
+    } //запись результирующего файла
     public void setTempPath(String tempPath) {
         inputPath.setTempDir(tempPath);
-    }
-    public String inputFileExtension() {
+    } //временный путь
+    public String inputFileExtension() { //расшир входного файла
 
         int fileExtensionStart = 0;
         String output = null;
@@ -55,7 +55,7 @@ public class ReadWrite {
 
     }
 
-    public void Prepare() throws Exception {
+    public void Prepare() throws Exception { //подготовка файла
 
         inputPath.CreateDirs();
 
@@ -72,7 +72,7 @@ public class ReadWrite {
         if(!inputFile.isSupported()) throw new IllegalArgumentException("This exception of file is not supported");
 
     }
-    public void RandWSet() {
+    public void RandWSet() { // устанавливает объекты в зависимости от типа
 
         String extension = inputFileExtension();
         Reader r = null;
@@ -93,7 +93,7 @@ public class ReadWrite {
         setWriter(w);
         setReader(r);
     }
-    public void Process() throws Exception {
+    public void Process() throws Exception { 
 
         String buffer;
         String output;
