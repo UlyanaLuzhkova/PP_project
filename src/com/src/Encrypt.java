@@ -1,3 +1,4 @@
+//шифрование и де-шифрование файлов
 package com.src;
 
 import javax.crypto.*;
@@ -12,6 +13,7 @@ public class Encrypt {
     SecretKeySpec secretKey;
 
     public Encrypt(String secretKeyString) throws NoSuchPaddingException, NoSuchAlgorithmException {
+        //конструктор класса, принимающий секретный ключ и инициализирующий шифр
         this.secretKeyString = secretKeyString;
 
         cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
@@ -20,14 +22,15 @@ public class Encrypt {
     }
 
     public PathCheck EncryptFile(PathCheck inputFile, String outputDir) throws InvalidKeyException, IOException, IllegalBlockSizeException, BadPaddingException {
+//метод, выполняющий шифрование файла
 
         PathCheck outputFile = new PathCheck(outputDir + FileNameControl.MakeEncName(inputFile.getFileName()));
         outputFile.setOutputDir(inputFile.OutputDir());
         outputFile.setTempDir(inputFile.TempDir());
 
-        cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+        cipher.init(Cipher.ENCRYPT_MODE, secretKey); //инициализирует шифр для режима шифрования с использованием ключа
 
-        try(FileInputStream fis = new FileInputStream(inputFile.getFilePath());
+        try(FileInputStream fis = new FileInputStream(inputFile.getFilePath()); //чтение, шифрование и запись
             BufferedInputStream in = new BufferedInputStream(fis);
             FileOutputStream fout = new FileOutputStream(outputFile.getFilePath());
             BufferedOutputStream out = new BufferedOutputStream(fout); ) {
@@ -47,7 +50,7 @@ public class Encrypt {
     }
 
     public PathCheck DecryptFile(PathCheck inputFile, String outputDir) throws IOException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
-
+//метод, выполняющий разшифрование файла
         PathCheck outputFile = new PathCheck(outputDir + FileNameControl.FileNameOnly(inputFile.getFileName())+".");
         outputFile.setOutputDir(inputFile.OutputDir());
         outputFile.setTempDir(inputFile.TempDir());
