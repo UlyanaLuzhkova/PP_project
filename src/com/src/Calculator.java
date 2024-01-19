@@ -1,9 +1,12 @@
+// обработка алгебраических выражений
 package com.src;
 import java.util.Objects;
 
 public class Calculator {
 
-    private static String ProcessAlgebraicExpression(String input) {
+    private static String ProcessAlgebraicExpression(String input) { //в этом методе происходит поиск и вычисление
+        // операций с наивысшим приоритетом, затем со следующим и тд. результаты заменяются обратно в исходное
+        // выражение, пока все операции не будут выполнены
 
         int priority = 2;
         String output = input;
@@ -23,7 +26,7 @@ public class Calculator {
         return output;
     }
 
-    private static String BracketsDelete(String input) {
+    private static String BracketsDelete(String input) { //удаляет скобки из входной строки
 
         String output = input;
 
@@ -33,7 +36,8 @@ public class Calculator {
 
     }
 
-    private static String ProcessBracketsExpression(String input) {
+    private static String ProcessBracketsExpression(String input) { // ищем 1ую пару скобок, удаляем ее,
+        // заменяем скобки результатом вычислений пока все не будут удалены
 
         String output = input;
         String temp;
@@ -56,7 +60,7 @@ public class Calculator {
 
     }
 
-    public static String Process(String input) {
+    public static String Process(String input) {  //вызывает остальные методы
 
         String output = input;
         output = ProcessBracketsExpression(output);
@@ -68,7 +72,7 @@ public class Calculator {
 
 }
 
-class Counter {
+class Counter {  //вспомогательный класс, содержащий методы для выполнения мат операций
 
     public static String Calculate(String userArithmeticExpression) {
 

@@ -11,7 +11,7 @@ public class CommandsTests {
     @Test
     public void Commands_UnsupportedExtension() throws Exception {
 
-        String[] args = {"/IdeaProjects/project_/TestFiles/testFile.rtf"};
+        String[] args = {"C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile.rtf"};
 
         try {
             Commands.Process(args);
