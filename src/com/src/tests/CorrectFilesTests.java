@@ -26,7 +26,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareEncryptedFile_NoEncryptionKey() throws Exception {
 
-        PathCheck EncryptedTxt = new PathCheck("/Users/Юзер/IdeaProjects/project_/TestFiles/NewTxtEnc.enc");
+        PathCheck EncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/NewTxtEnc.enc");
 //C:\Users\Юзер\IdeaProjects\project_\TestFiles\NewTxtEnc.enc
         CorrectFiles fileNormaliser = new CorrectFiles();
         EncryptedTxt.CreateDirs();
@@ -47,7 +47,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareEncryptedTxtFile() throws Exception {
 
-        PathCheck EncryptedTxt = new PathCheck("/Users/Юзер/IdeaProjects/project_/TestFiles/NewTxtEnc.enc");
+        PathCheck EncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/NewTxtEnc.enc");
         PathCheck outputFile;
 
         CorrectFiles fileNormaliser = new CorrectFiles();
@@ -68,7 +68,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareZippedTxtFile() throws Exception {
 
-        PathCheck ZippedTxt = new PathCheck("/Users/Юзер/IdeaProjects/project_/TestFiles/ZipTxtFile.zip");
+        PathCheck ZippedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/ZipTxtFile.zip");
         PathCheck outputFile;
 
         CorrectFiles fileNormaliser = new CorrectFiles();
@@ -88,7 +88,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareZippedEncryptedTxtFile() throws Exception {
 
-        PathCheck ZippedEncryptedTxt = new PathCheck("/IdeaProjects/project_/TestFiles/testFile\\\\zippedEncryptedTxt.zip");
+        PathCheck ZippedEncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\zippedEncryptedTxt.zip");
         PathCheck outputFile;
 
         CorrectFiles fileNormaliser = new CorrectFiles();
@@ -109,7 +109,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareEncryptedZippedTxtFile() throws Exception {
 
-        PathCheck EncryptedZippedTxt = new PathCheck("/IdeaProjects/project_/TestFiles/testFile\\\\encryptedZippedTxt.enc");
+        PathCheck EncryptedZippedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\encryptedZippedTxt.enc");
         PathCheck outputFile;
 
         CorrectFiles fileNormaliser = new CorrectFiles();
@@ -130,7 +130,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareEncryptedXmlFile() throws Exception {
 
-        PathCheck EncryptedTxt = new PathCheck("/IdeaProjects/project_/TestFiles/testFile\\\\encryptedXml.enc");
+        PathCheck EncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\encryptedXml.enc");
         PathCheck outputFile;
 
         CorrectFiles fileNormaliser = new CorrectFiles();
@@ -151,7 +151,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareZippedXmlFile() throws Exception {
 
-        PathCheck ZippedTxt = new PathCheck("/Users/Юзер/IdeaProjects/project_/TestFiles/XmlZipFile.zip");
+        PathCheck ZippedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/XmlZipFile.zip");
         PathCheck outputFile;
 
         CorrectFiles fileNormaliser = new CorrectFiles();
@@ -171,7 +171,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareZippedEncryptedXmlFile() throws Exception {
 
-        PathCheck ZippedEncryptedTxt = new PathCheck("/IdeaProjects/project_/TestFiles/testFile\\\\zippedEncryptedXml.zip");
+        PathCheck ZippedEncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\zippedEncryptedXml.zip");
         PathCheck outputFile;
 
         CorrectFiles fileNormaliser = new CorrectFiles();
@@ -192,7 +192,7 @@ public class CorrectFilesTests {
     @Test
     public void prepareEncryptedZippedXmlFile() throws Exception {
 
-        PathCheck EncryptedZippedTxt = new PathCheck("/IdeaProjects/project_/TestFiles/testFile\\\\encryptedZippedXml.enc");
+        PathCheck EncryptedZippedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\encryptedZippedXml.enc");
         PathCheck outputFile;
 
         CorrectFiles fileNormaliser = new CorrectFiles();
