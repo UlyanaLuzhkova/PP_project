@@ -5,14 +5,14 @@ import java.util.regex.Pattern;
 
 public interface Finder {
 
-    String FindFirst(String input);
-    String ReplaceFirst(String input, String replace);
-    String GroupFind(int group, String input);
-    boolean exists(String input);
+    String FindFirst(String input); //первое найденное совпадение
+    String ReplaceFirst(String input, String replace); //заменяет 1 совпадение на замену
+    String GroupFind(int group, String input); //возвр группу совпадений
+    boolean exists(String input); //проверяет наличие совпадений
 
 }
 
-class FindBrackets implements Finder {
+class FindBrackets implements Finder { //поиск, замена и проверка наличия выражений в скобках
 
     Pattern pattern;
     Matcher matcher;
@@ -62,7 +62,7 @@ class FindBrackets implements Finder {
     }
 
 }
-class FindCalculateTasks implements Finder {
+class FindCalculateTasks implements Finder { //поиск, замена и проверка мат выражений во входной строке
 
     Pattern pattern;
     Matcher matcher;
@@ -118,7 +118,7 @@ class FindCalculateTasks implements Finder {
         else return null;
     }
 }
-class FindSymbols implements Finder {
+class FindSymbols implements Finder { //поиск, замена и проверка наличия указанного символа
 
     Pattern pattern;
     Matcher matcher;
@@ -171,7 +171,7 @@ class FindSymbols implements Finder {
     }
 
 }
-class FindHeaderOfXmlFiles implements Finder{
+class FindHeaderOfXmlFiles implements Finder{ //поиск заголовка XML файла, извлечение группы совпадений
 
     Pattern pattern;
     Matcher matcher;

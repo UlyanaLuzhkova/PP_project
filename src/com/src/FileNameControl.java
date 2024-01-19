@@ -2,7 +2,7 @@ package com.src;
 
 public class FileNameControl {
 
-    public static String FileNameOnly(String fileName) {
+    public static String FileNameOnly(String fileName) { //принимает полное имя файла, возвращает без расширения
 
         String output;
 
@@ -14,7 +14,7 @@ public class FileNameControl {
         return output;
 
     }
-    public static String FileExtensionOnly(String fileName) {
+    public static String FileExtensionOnly(String fileName) { //возвращает только расширение
         String output;
 
         int fileNameEnd;
