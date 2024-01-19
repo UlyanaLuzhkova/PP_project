@@ -1,3 +1,4 @@
+//обработка входных аргументов, проверка их корректности, установка параметров и вызов методов для обработки данных
 package com.src;
 import java.io.FileNotFoundException;
 import java.security.InvalidKeyException;
