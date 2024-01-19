@@ -16,7 +16,7 @@ public class Interface {
         rw.End();
         System.out.println("The Calculations are in the output: ");
     }
-    public void FilePreparation() throws Exception {
+    public void FilePreparation() throws Exception { //подготовка файла к чтению и записи
         boolean correctFile = false;
         while(!correctFile) {
             PathCheck filePath = PathInput();
@@ -35,7 +35,7 @@ public class Interface {
             }
         }
     }
-    public void RAndWSet() {
+    public void RAndWSet() { //устанавливает объекты чтения и записи в зависимости от типа файла
 
         String extension = rw.inputFileExtension();
 
@@ -60,7 +60,7 @@ public class Interface {
 
     }
 
-    public PathCheck PathInput() {
+    public PathCheck PathInput() { //запрашивает путь к файлу и проверяет его на допустимость
         PathCheck filePath = null;
         String filePathTemp;
         boolean correct = false;
@@ -74,7 +74,7 @@ public class Interface {
 
         return filePath;
     }
-    public String KeyInput() {
+    public String KeyInput() { //запрашивает ключ шифрования
         System.out.println("Input encrypt key");
         String input = in.nextLine();;
         return input;
