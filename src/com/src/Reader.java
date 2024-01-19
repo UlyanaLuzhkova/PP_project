@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public interface Reader {
+    //интерфейс с методами, необходимыми для чтения данных из различных типов файлов
 
     void Open(String fileName) throws Exception;
     String ReadLine() throws Exception;
@@ -19,7 +20,7 @@ public interface Reader {
 }
 
 class TxtReader implements Reader{
-
+//класс, реализующий интерфейс для чтения из текстовых файлов
     FileReader fr;
     Scanner scan;
 
@@ -52,7 +53,7 @@ class TxtReader implements Reader{
 }
 
 class XmlReader implements Reader{
-
+//реализ интерфейс для чтения из xml файлов
     XMLStreamReader xmlr;
 
     @Override
