@@ -6,14 +6,15 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-public class ZipFiles {
+public class ZipFiles { //упаковка и распаковка зип файлов
 
-    public static PathCheck Zip(PathCheck file, String outputDir, String zipName) throws IOException {
+    public static PathCheck Zip(PathCheck file, String outputDir, String zipName) throws IOException { //метод упаковки
 
         PathCheck archive = new PathCheck(outputDir + zipName);
         archive.setOutputDir(file.OutputDir());
         archive.setTempDir(file.TempDir());
 
+        //инициализация потока для записи в архив
         try(ZipOutputStream zout = new ZipOutputStream(new FileOutputStream(archive.getFilePath()));
             FileInputStream fis = new FileInputStream(file.getFilePath())) {
 
@@ -31,6 +32,7 @@ public class ZipFiles {
         return archive;
 
     }
+    //метод для извлечения файлов из архива
     public static PathCheck Unzip(PathCheck archive, String outputDir) throws IOException {
 
         PathCheck file = new PathCheck();
