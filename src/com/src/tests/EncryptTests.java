@@ -19,7 +19,7 @@ public class EncryptTests {
     @Test
     public void encryptionTest() throws NoSuchPaddingException, NoSuchAlgorithmException, IllegalBlockSizeException, IOException, BadPaddingException, InvalidKeyException {
 
-        PathCheck inputPath = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/TxtFile.txt");
+        PathCheck inputPath = new PathCheck("C:/Users/User/OneDrive/Documentation/GitHub/PP_project/TestFiles/TxtFile.txt");
         inputPath.CreateDirs();
         PathCheck outputFile;
 

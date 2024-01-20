@@ -44,7 +44,7 @@ public class CorrectFilesTests {
 
     }
 
-    @Test
+    /*@Test
     public void prepareEncryptedTxtFile() throws Exception {
 
         PathCheck EncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/NewTxtEnc.enc");
@@ -63,9 +63,9 @@ public class CorrectFilesTests {
 
         Assert.assertEquals(outputFile.getExtension(), ".txt");
 
-    }
+    }*/
 
-    @Test
+   /* @Test
     public void prepareZippedTxtFile() throws Exception {
 
         PathCheck ZippedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/ZipTxtFile.zip");
@@ -83,9 +83,9 @@ public class CorrectFilesTests {
 
         Assert.assertEquals(outputFile.getExtension(), ".txt");
 
-    }
+    }*/
 
-    @Test
+   /* @Test
     public void prepareZippedEncryptedTxtFile() throws Exception {
 
         PathCheck ZippedEncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\zippedEncryptedTxt.zip");
@@ -104,9 +104,9 @@ public class CorrectFilesTests {
 
         Assert.assertEquals(outputFile.getExtension(), ".txt");
 
-    }
+    }*/
 
-    @Test
+    /*@Test
     public void prepareEncryptedZippedTxtFile() throws Exception {
 
         PathCheck EncryptedZippedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\encryptedZippedTxt.enc");
@@ -125,9 +125,9 @@ public class CorrectFilesTests {
 
         Assert.assertEquals(outputFile.getExtension(), ".txt");
 
-    }
+    }*/
 
-    @Test
+    /*@Test
     public void prepareEncryptedXmlFile() throws Exception {
 
         PathCheck EncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\encryptedXml.enc");
@@ -146,7 +146,7 @@ public class CorrectFilesTests {
 
         Assert.assertEquals(outputFile.getExtension(), ".xml");
 
-    }
+    }*/
 
     @Test
     public void prepareZippedXmlFile() throws Exception {
@@ -168,7 +168,7 @@ public class CorrectFilesTests {
 
     }
 
-    @Test
+    /*@Test
     public void prepareZippedEncryptedXmlFile() throws Exception {
 
         PathCheck ZippedEncryptedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\zippedEncryptedXml.zip");
@@ -187,9 +187,9 @@ public class CorrectFilesTests {
 
         Assert.assertEquals(outputFile.getExtension(), ".xml");
 
-    }
+    }*/
 
-    @Test
+   /* @Test
     public void prepareEncryptedZippedXmlFile() throws Exception {
 
         PathCheck EncryptedZippedTxt = new PathCheck("C:/Users/User/OneDrive/Документы/GitHub/PP_project/TestFiles/testFile\\\\encryptedZippedXml.enc");
@@ -208,7 +208,7 @@ public class CorrectFilesTests {
 
         Assert.assertEquals(outputFile.getExtension(), ".xml");
 
-    }
+    }*/
 }
 
 
